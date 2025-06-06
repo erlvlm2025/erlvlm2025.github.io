@@ -1,8 +1,437 @@
 <!DOCTYPE html>
 <html>
-<head><title>Welcome</title></head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ERL-VLM</title>
+    <!-- <style>
+      .hover-trigger {
+          position: relative;
+          cursor: pointer;
+      }
+
+      .hover-trigger:hover .hover-image {
+          display: block;
+      }
+
+      .hover-image {
+          display: none;
+          position: absolute;
+          left: 100%; /* Position to the right of the trigger text */
+          top: 0;
+          background: #fff;
+          border: 1px solid #ccc;
+          padding: 5px;
+      }
+
+      /* Adding a border to the hover-trigger for visual clarity */
+      .hover-trigger {
+          border: 1px solid transparent; /* Invisible border to avoid shifting text on hover */
+      }
+    </style> -->
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
 <body>
-  <h1>Hello from our GitHub Pages site!</h1>
-  <p>More coming soon.</p>
+
+<!-- Author information -->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-widescreen">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">
+                        Enhancing Rating-Based Reinforcement Learning to Effectively Leverage Feedback from Large Vision-Language Models
+                    </h1>
+                    <div class="is-size-4 publication-authors">
+                        <span class="author-block">
+                            <a target="_blank" href="">Tung M. Luu</a>,
+                            <a target="_blank" href="https://sanctusfactory.com/family_02.php#:~:text=Machine%20Learning-,YoungHwan%20Lee,-%E2%97%8B%20Email%20Address">Younghwan Lee</a>,
+                            <a target="_blank" href="https://sanctusfactory.com/family_02.php#:~:text=Speech%20Processing-,Donghoon%20Lee,-%E2%97%8B%20Email%20Address">Donghoon Lee</a>,
+                            <a target="_blank" href="https://drive.google.com/file/d/1LEpu0z4J5AohFy6fxgoXC6ZKweTYDjpu/view">Sunho Kim</a>,
+                            <br>
+                            <a target="_blank" href="https://ee.kaist.ac.kr/en/professor/17499/">Min Jun Kim</a>,
+                            <a target="_blank" href="https://sanctusfactory.com/family.php">Chang D. Yoo</a>
+                        </span>
+                    </div>
+                    <div class="is-size-4 publication-authors">
+                        <span class="author-block">Korea Advanced Institute of Science and Technology (KAIST)</span>
+                    </div>
+<!--                    <div class="is-size-6 publication-authors">-->
+<!--                        <span class="author-block"><sup>*~</sup>Equal Contribution </span>-->
+<!--                        <span class="author-block"><sup>&dagger;</sup>Equal Advising </span>-->
+<!--                    </div>-->
+                    <br>
+                    <h3 class="title is-3 conference-authors">
+                        <a target="_blank" href="https://icml.cc/">ICML 2025</a>
+                    </h3>
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- TODO REPLACE ALL LINKS -->
+                            <span class="link-block">
+                                <a target="_blank" href="https://arxiv.org/abs/2402.03681"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="ai ai-arxiv"></i>
+                                    </span>
+                                    <span>arXiv</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a target="_blank" href="https://openreview.net/forum?id=k77bq8AJVy"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon"><i class="fas fa-file-alt"></i></span>
+                                    <span>OpenReview</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a target="_blank" href="https://github.com/tunglm2203/erlvlm"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Teaser video -->
+<!--<section class="section" style="padding: 0">-->
+<!--    <div class="container is-max-widescreen">-->
+<!--        <div class="columns is-centered has-text-centered">-->
+<!--            <video poster="" id="" autoplay muted controls loop width="100%" style="border-radius: 5px;">-->
+<!--                <source src="videos/teaser.mp4" type="video/mp4">-->
+<!--            </video>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!-- Abstract -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column">
+                <h2 class="title is-2"> Abstract </h2>
+                <div class="content has-text-justified">
+                    <p style="font-size: 125%">
+                        Designing effective reward functions remains a fundamental challenge in
+                        RL, as it often requires extensive human effort and domain expertise.
+                        While RLHF has been successful in aligning agents
+                        with human intent, acquiring high-quality feedback is costly and labor-intensive.
+                        Recent advancements in foundation models (LLMs or VLMs) present a promising
+                        alternative--leveraging AI-generated feedback to reduce reliance on human supervision
+                        in reward learning. Building on this paradigm, we introduce <strong>ERL-VLM</strong>, a
+                        rating-based RL method that effectively learns reward functions from AI feedback.
+                        Unlike prior methods that rely on pairwise comparisons, <strong>ERL-VLM queries large
+                        vision-language models for absolute ratings of individual trajectories, enabling more expressive
+                        feedback and improved sample efficiency</strong>. We also propose key enhancements to
+                        rating-based RL, addressing instability issues caused by data imbalance and noisy labels.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Method -->
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-2"> ERL-VLM Method </h2>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 125%">
+                            ERL-VLM queries large vision language models (VLMs), such as Gemini and ChatGPT, for rating
+                            feedback on individual trajectories in order to learn a reward model.
+                            Compared to preference-based feedback, this approach allows VLMs to provide more expressive
+                            evaluations, reduces ambiguity in queries, and ensures that all samples are fully utilized during reward learning.
+                        </p>
+                        <br>
+                        <img src="imgs/erl-vlm-overview.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto; max-width: 80%;"/>
+                        <br>
+                        <p style="font-size: 125%">
+                            While training the ERL-VLM agent, we sample a state (a single image) or a trajectory (multiple images)
+                            from the replay buffer and use it together with a task description to query a large VLM for ratings.
+                            The sampled states or trajectories, along with their corresponding ratings, are then stored in the rating dataset.
+                            We use rating-based RL to learn the reward model from this dataset, incorporating
+                            two improvements: (i) stratified sampling and (ii) mean absolute error loss, to address instability caused by <em>data imbalance</em> and <em>noisy labels</em> from VLMs.
+                            The learned reward model is then used to train the agent using off-policy RL algorithms such as SAC or IQL.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-2"> Results </h2>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 125%">
+                            In simulated environments, we evaluate ERL-VLM on low-level manipulation control tasks in
+                            MetaWorld and high-level vision-language navigation tasks in ALFRED.
+                            We compare our method against prior approaches that also use pretrained vision-language
+                            models to generate rewards based on image observations and text task descriptions.
+                        </p>
+
+                        <h3 class="title is-3" style="text-align: left;"> Comparison to Baselines </h3>
+                        <img src="imgs/comparison_learning_curve.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%;"/>
+                        <br>
+                        <p style="font-size: 125%">
+                            ERL-VLM outperforms all baselines in 6 out of 7 tasks across the two domains.
+                            In ALFRED, for the PickupObject and PutObject tasks, ERL-VLM even outperforms the sparse
+                            reward function provided by the environment.
+                        </p>
+
+                        <h3 class="title is-3" style="text-align: left;"> Visualization of the Learned Reward </h3>
+                        <p style="font-size: 125%">
+                            We provide visualizations of the reward outputs from ERL-VLM, RL-VLM-F, and CLIP along
+                            expert trajectories across three MetaWorld tasks and four ALFRED tasks. The learned rewards
+                            are averaged over three runs, with shaded regions indicating standard deviation. Images are
+                            rendered at corresponding timesteps from the expert trajectories.
+                        </p>
+                        <p style="font-size: 21px; margin-bottom: 10px;"><strong> MetaWorld </strong> </p>
+                        <img src="imgs/reward_output_metaworld.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto; max-width: 90%;"/>
+                        <br>
+                        <p style="font-size: 21px; margin-bottom: 10px;"><strong> ALFRED </strong> </p>
+                        <img src="imgs/reward_output_alfred.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto; max-width: 90%;"/>
+                        <br>
+                        <p style="font-size: 125%">
+                            In MetaWorld tasks, CLIP rewards are generally noisy and poorly aligned with task progress.
+                            While both ERL-VLM and RL-VLM-F exhibit increasing reward trends along expert trajectories,
+                            ERL-VLM aligns more closely with the ground-truth task progress and shows significantly less
+                            noise compared to RL-VLM-F. In ALFRED, ERL-VLM produces smoother and more consistent reward
+                            signals along expert trajectories than the other methods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- rollout examples of ours and baselines for each task -->
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-2"><span class="dvima">Prompts and Rollouts</span></h2>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 125%">
+                            The rollouts from our method and the baselines in the MetaWorld and ALFRED domains are shown
+                            below. For each task, we provide a text description of the task goal used by ERL-VLM.
+                            This description is combined with a predefined prompt template to form the complete input
+                            used to query the VLM for ratings.
+                        </p>
+
+                        <h3 class="title is-3"> MetaWorld </h3>
+                        <img src="imgs/prompt_template_metaworld.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto; max-width: 80%">
+                        <br>
+                        <div style="margin-bottom: 20px;">
+                            <!-- Subsection for Sweep Into -->
+                            <p style="font-size: 21px; margin-bottom: 10px;"><strong> Sweep Into </strong> </p>
+                            <div>
+                                <pre class="p-1 scrollable"><code class="language-markdown" id="answer-1">Task description: "place the green cube so that it lies on the square hole"</code></pre>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="text-align: center; width: 100%;">
+                                    <video autoplay muted loop controls width="100%" style="border-radius: 5px;">
+                                        <source src="videos/mw-sweep-into.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <!-- Subsection for Drawer Open-->
+                            <p style="font-size: 21px; margin-bottom: 10px;"><strong> Drawer Open </strong> </p>
+                            <div>
+                                <pre class="p-1 scrollable"><code class="language-markdown" id="answer-2">Task description: "open the drawer"</code></pre>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="text-align: center; width: 100%;">
+                                    <video autoplay muted loop controls width="100%" style="border-radius: 5px;">
+                                        <source src="videos/mw-drawer-open.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <!-- Subsection for Soccer -->
+                            <p style="font-size: 21px; margin-bottom: 10px;"><strong> Soccer </strong> </p>
+                            <div>
+                                <pre class="p-1 scrollable"><code class="language-markdown" id="answer-3">Task description: "place the soccer ball so that it lies inside the goal"</code></pre>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="text-align: center; width: 100%;">
+                                    <video autoplay muted loop controls width="100%" style="border-radius: 5px;">
+                                        <source src="videos/mw-soccer.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                         </div>
+
+                        <h3 class="title is-3"> ALFRED </h3>
+                        <img src="imgs/prompt_template_alfred.png" class="interpolation-image" alt="" style="display: block; margin-left: auto; margin-right: auto; max-width: 80%">
+                        <br>
+                        <div style="margin-bottom: 20px;">
+                            <!-- Subsection for PickupObject -->
+                            <p style="font-size: 21px; margin-bottom: 10px;"><strong> PickupObject </strong> </p>
+                            <div>
+                                <pre class="p-1 scrollable"><code class="language-markdown" id="answer-4">Task description: "Pick up the mug in the coffee maker"</code></pre>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="text-align: center; width: 100%;">
+                                    <video autoplay muted loop controls width="100%" style="border-radius: 5px;">
+                                        <source src="videos/alfred-pickup-1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <br>
+                            <div>
+                                <pre class="p-1 scrollable"><code class="language-markdown" id="answer-5">Task description: "Pick up the white coffee cup to the right of the trophy"</code></pre>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="text-align: center; width: 100%;">
+                                    <video autoplay muted loop controls width="100%" style="border-radius: 5px;">
+                                        <source src="videos/alfred-pickup-2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <br>
+
+                            <!-- Subsection for PutObject -->
+                            <h2 style="font-size: 21px; margin-bottom: 10px;"><strong> PutObject </strong> </h2>
+                            <div>
+                                <pre class="p-1 scrollable"><code class="language-markdown" id="answer-6">Task description: "Put the knife in the green cup in the sink"</code></pre>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="text-align: center; width: 100%;"> <!-- Adjust width for resizing GIFs -->
+                                    <video autoplay muted loop controls width="100%" style="border-radius: 5px;">
+                                        <source src="videos/alfred-put-1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <br>
+
+                            <!-- Subsection for CoolObject -->
+                            <p style="font-size: 21px; margin-bottom: 10px;"><strong> CoolObject </strong> </p>
+                            <div>
+                                <pre class="p-1 scrollable"><code class="language-markdown" id="answer-7">Task description: "Open the fridge, put the cup in the fridge, close the fridge, wait, open the fridge, pick the cup, close the fridge"</code></pre>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="text-align: center; width: 100%;"> <!-- Adjust width for resizing GIFs -->
+                                    <video autoplay muted loop controls width="100%" style="border-radius: 5px;">
+                                        <source src="videos/alfred-cool-1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <br>
+
+                            <!-- Subsection for CleanObject -->
+                            <p style="font-size: 21px; margin-bottom: 10px;"><strong> CleanObject </strong> </p>
+                            <div>
+                                <pre class="p-1 scrollable"><code class="language-markdown" id="answer-8">Task description: "Put the coffee cup in the sink, turn on the water, turn off the water and pick up the coffee cup"</code></pre>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="text-align: center; width: 100%;"> <!-- Adjust width for resizing GIFs -->
+                                    <video autoplay muted loop controls width="100%" style="border-radius: 5px;">
+                                        <source src="videos/alfred-clean-1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <strong>Note</strong>: Since RL-VLM-F fails to complete the PickupObject task, it does not progress to subsequent tasks (PutObject, CoolObject, CleanObject). As a result, rollouts from RL-VLM-F in these tasks are not shown.</h2>
+                        </div>
+
+                        <h3 class="title is-3"> Real Robotic Demo </h3>
+                        <div class="columns is-centered">
+                            <div class="column has-text-centered">
+                                <video autoplay muted loop controls style="width: 100%; border-radius: 5px;">
+                                    <source src="videos/sweep_bowl.mp4" type="video/mp4">
+                                </video>
+                                <p class="video-caption">Sweep Bowl</p>
+                            </div>
+                            <div class="column has-text-centered">
+                                <video autoplay muted loop controls style="width: 100%; border-radius: 5px;">
+                                    <source src="videos/pickup_banana.mp4" type="video/mp4">
+                                </video>
+                                <p class="video-caption">Pickup Banana</p>
+                            </div>
+                            <div class="column has-text-centered">
+                                <video autoplay muted loop controls style="width: 100%; border-radius: 5px;">
+                                    <source src="videos/open_drawer.mp4" type="video/mp4">
+                                </video>
+                                <p class="video-caption">Drawer Open</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-widescreen content">
+        <h2 class="title">BibTeX</h2>
+    <pre>@InProceedings{
+    luu2025erlvlm,
+    title={Enhancing Rating-Based Reinforcement Learning to Effectively Leverage Feedback from Large Vision-Language Models},
+    author={Tung Minh Luu , Younghwan Lee, Donghoon Lee, Sunho Kim, Min Jun Kim, Chang D. Yoo},
+    booktitle={Proceedings of the 42th International Conference on Machine Learning},
+    year={2025}
+}
+        </pre>
+    </div>
+</section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <div class="content has-text-centered">
+                        <p>
+                            Website template borrowed from <a
+                            href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a
+                            href="https://rlvlmf2024.github.io/">RL-VLM-F</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
